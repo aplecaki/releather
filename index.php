@@ -9,10 +9,10 @@
 <body>
     <main>
         <section class="hero">
-            <nav aria-label="Main navigation">
-                <a class="logo" href="index.php">ReLeather</a>
-                <a class="nav-link" href="dashboard.php">Open dashboard</a>
-            </nav>
+            <div class="hero-bar">
+                <span class="logo">ReLeather</span>
+                <?php include "nav.php"; ?>
+            </div>
 
             <div class="hero-content">
                 <p class="eyebrow">Furniture, reimagined</p>

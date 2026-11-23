@@ -8,6 +8,7 @@ Started as part of the class Git practice repository `rwarners/gitoefening`.
 - `index.php` – landing page (static, no database needed)
 - `dashboard.php` – stats, couch categories and live inventory, read from MySQL
 - `couches.php` – add, edit, delete and mark couches as sold
+- `nav.php` – shared menu used on every page
 - `connection.php` – database connection
 - `style.css` – shared styles for all pages
 - `schema.sql` – database tables and sample data

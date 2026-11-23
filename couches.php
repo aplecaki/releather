@@ -153,10 +153,7 @@ $isEditing = $form["id"] !== null;
         <h1>ReLeather</h1>
         <p>Manage couches</p>
     </div>
-    <div class="header-links">
-        <a class="nav-link" href="index.php">Home</a>
-        <a class="nav-link" href="dashboard.php">Dashboard</a>
-    </div>
+    <?php include "nav.php"; ?>
 </header>
 
 <div class="container">

@@ -60,10 +60,12 @@ body {
         url("backmetro.jpg") center / cover;
 }
 
-.hero nav {
+.hero-bar {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    gap: 14px 28px;
     max-width: 1180px;
     margin: 0 auto;
     padding: 28px 28px 0;
@@ -267,7 +269,11 @@ footer {
 
 /* Couch management (couches.php) */
 
-.header-links { display: flex; flex-wrap: wrap; gap: 22px; }
+.header-links { display: flex; flex-wrap: wrap; gap: 12px 22px; }
+
+.nav-link { border-bottom-color: transparent; }
+.nav-link:hover,
+.nav-link:focus-visible { border-bottom-color: #fff; }
 
 button.button { border: 0; font-family: var(--sans); cursor: pointer; }
 
