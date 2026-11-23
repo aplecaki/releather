@@ -23,7 +23,7 @@ function findCouch(mysqli $conn, int $id): ?array
     return $stmt->get_result()->fetch_assoc() ?: null;
 }
 
-// Protects the forms against requests sent from other websites.
+// token so other websites cant use our forms
 $_SESSION["csrf"] ??= bin2hex(random_bytes(32));
 $csrf = $_SESSION["csrf"];
 
@@ -54,7 +54,7 @@ try {
                 "id" => $id ?: null,
                 "name" => trim(is_string($_POST["name"] ?? null) ? $_POST["name"] : ""),
                 "category" => is_string($_POST["category"] ?? null) ? $_POST["category"] : "",
-                // Accept both 5.5 and the Dutch notation 5,5.
+                // so you can type 5,5 and 5.5
                 "leather_kg" => str_replace(",", ".", trim(is_string($_POST["leather_kg"] ?? null) ? $_POST["leather_kg"] : "")),
                 "sold" => isset($_POST["sold"]) ? 1 : 0,
             ];

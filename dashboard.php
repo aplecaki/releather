@@ -4,7 +4,7 @@ include "connection.php";
 $selected = isset($_GET["category"]) && is_string($_GET["category"]) ? trim($_GET["category"]) : "";
 
 try {
-    // Totals for the stat boxes.
+    // get the numbers for the boxes
     $stats = $conn->query(
         "SELECT COUNT(*) AS made,
                 COALESCE(SUM(sold), 0) AS sold,
@@ -12,7 +12,7 @@ try {
          FROM couches"
     )->fetch_assoc();
 
-    // Categories with the number of couches still in stock.
+    // get the categories and how many couches are left
     $categories = $conn->query(
         "SELECT c.name, c.width_cm, c.depth_cm, c.height_cm, COUNT(k.id) AS amount
          FROM categories c
@@ -21,7 +21,7 @@ try {
          ORDER BY c.name"
     )->fetch_all(MYSQLI_ASSOC);
 
-    // Couches in stock, optionally filtered by category.
+    // get the couches, only from one category if you clicked one
     if ($selected !== "") {
         $stmt = $conn->prepare("SELECT name, category FROM couches WHERE sold = 0 AND category = ? ORDER BY name");
         $stmt->bind_param("s", $selected);

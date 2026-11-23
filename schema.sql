@@ -1,5 +1,5 @@
--- ReLeather database. Import with:  mysql -u root < schema.sql
--- Warning: this drops and recreates the couches and categories tables.
+-- makes the database, run it with: mysql -u root < schema.sql
+-- careful this deletes the old tables and makes them again
 
 CREATE DATABASE IF NOT EXISTS fullstack CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE fullstack;

@@ -17,7 +17,7 @@ body {
     font-family: var(--sans);
 }
 
-/* Shared */
+/* buttons and links */
 
 .button {
     display: inline-flex;
@@ -50,7 +50,7 @@ body {
     text-transform: uppercase;
 }
 
-/* Home page (index.php) */
+/* home page */
 
 .hero {
     min-height: 680px;
@@ -164,7 +164,7 @@ footer {
     text-align: center;
 }
 
-/* Dashboard (dashboard.php) */
+/* dashboard page */
 
 .dash-header {
     display: flex;
@@ -267,7 +267,7 @@ footer {
 .record strong { font-family: var(--serif); font-size: 1.2rem; }
 .records-empty { color: var(--muted); font-style: italic; }
 
-/* Couch management (couches.php) */
+/* couches page */
 
 .header-links { display: flex; flex-wrap: wrap; gap: 12px 22px; }
 
@@ -379,7 +379,7 @@ button.button { border: 0; font-family: var(--sans); cursor: pointer; }
     .couch-table td:last-child .row-actions { justify-content: flex-start; }
 }
 
-/* Responsive */
+/* for phones */
 
 @media (max-width: 800px) {
     .dashboard { grid-template-columns: repeat(2, 1fr); }

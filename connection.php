@@ -1,7 +1,7 @@
 <?php
 
-// Database settings. Set the DB_* environment variables on a real server;
-// the defaults below match a local XAMPP/Herd install.
+// database login info
+// this works on your own pc, on a real server you need to change it
 $dbHost = getenv('DB_HOST') ?: 'localhost';
 $dbUser = getenv('DB_USER') ?: 'root';
 $dbPass = getenv('DB_PASS') ?: '';
@@ -13,7 +13,7 @@ try {
     $conn = new mysqli($dbHost, $dbUser, $dbPass, $dbName);
     $conn->set_charset('utf8mb4');
 } catch (mysqli_sql_exception $e) {
-    // Log the details, but do not show them to visitors.
+    // if it doesnt connect show a simple message
     error_log('Database connection failed: ' . $e->getMessage());
     http_response_code(500);
     exit('The database is unavailable right now. Please try again later.');

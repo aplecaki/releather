@@ -1,12 +1,12 @@
 <?php
-// Shared menu: add a page here and it appears on every other page.
+// the menu, put new pages here
 $navPages = [
     "index.php" => "Home",
     "dashboard.php" => "Dashboard",
     "couches.php" => "Manage couches",
 ];
 
-// Don't link to the page you are already on.
+// hide the page youre already on
 unset($navPages[basename($_SERVER["SCRIPT_NAME"])]);
 ?>
 <nav class="header-links" aria-label="Main navigation">
