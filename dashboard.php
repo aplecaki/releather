@@ -56,7 +56,10 @@ $leather = rtrim(rtrim(number_format((float) $stats["leather"], 2, ".", ""), "0"
         <h1>ReLeather</h1>
         <p>Reused leather. New couches.</p>
     </div>
-    <a class="nav-link" href="index.php">Home</a>
+    <div class="header-links">
+        <a class="nav-link" href="index.php">Home</a>
+        <a class="nav-link" href="couches.php">Manage couches</a>
+    </div>
 </header>
 
 <div class="container">
